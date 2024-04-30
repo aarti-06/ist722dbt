@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Transaction. One row per product item ordered"
+    columns:
+      - name: order_id
+        description: "source key used for drill through"
+      - name: customerkey
+        description: "Dimension FK from customer"
+      - name: orderdatekey
+        description: "Dimension FK from dim_date"
+      - name: productkey
+        description: "Dimension FK from dim_product"
+      - name: quantitykey
+        description: "Total number of products sold"
+      - name: unit_price
+        description: "Product price for a unit"
+      - name: extended_price_amount
+        description: "total amount based on quantity and unit price"

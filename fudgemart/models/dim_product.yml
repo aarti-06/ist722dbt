@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Table for storing product information"
+    columns:
+      - name: product_id
+        description: "Product ID"
+        tests:
+          - unique
+      - name: product_department
+        description: "Product Department"
+      - name: product_name
+        description: "Product Name"
+      - name: product_retail_price
+        description: "Product Retail Price"
+      - name: product_wholesale_price
+        description: "Product Wholesale Price"
+      - name: product_is_active
+        description: "Product Is Active"
+      - name: product_add_date
+        description: "Product Add Date"
+      - name: product_vendor_id
+        description: "Product Vendor ID"
+      - name: product_description
+        description: "Product Description"
