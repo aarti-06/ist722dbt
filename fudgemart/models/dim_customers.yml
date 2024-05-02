@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "View to select customer information"
+    columns:
+      - name: customer_id
+        description: "Customer ID"
+        tests:
+          - unique
+      - name: customer_email
+        description: "Customer Email"
+      - name: customer_firstname
+        description: "Customer First Name"
+      - name: customer_lastname
+        description: "Customer Last Name"
+      - name: customer_address
+        description: "Customer Address"
+      - name: customer_city
+        description: "Customer City"
+      - name: customer_state
+        description: "Customer State"
+      - name: customer_zip
+        description: "Customer Zip"
+      - name: customer_phone
+        description: "Customer Phone"
+      - name: customer_fax
+        description: "Customer Fax"

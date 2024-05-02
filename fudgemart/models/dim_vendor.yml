@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_vendor
+    description: "Table for storing vendor information"
+    columns:
+      - name: vendor_id
+        description: "Vendor ID"
+        tests:
+          - unique
+      - name: vendor_name
+        description: "Vendor Name"
+      - name: vendor_phone
+        description: "Vendor Phone"
+      - name: vendor_website
+        description: "Vendor Website"

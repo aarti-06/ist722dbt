@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+  - name: fudgemart_v3
+    database: raw
+    schema: fudgemart_v3
+
+    tables:
+      - name: fm_customers
+        columns:
+          - name: CUSTOMER_ID
+            tests:
+              - unique
+      - name: fm_products
+        columns:
+          - name: PRODUCT_ID
+            tests:
+              - unique
+      - name: fm_vendors
+        columns:
+          - name: VENDOR_ID
+            tests:
+              - unique
+      - name: fm_orders
+        columns:
+          - name: ORDER_ID
+            tests:
+              - unique
+      - name: fm_order_details
+        tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns:
+              - ORDER_ID
+              - PRODUCT_ID
+            
